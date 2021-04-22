@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.bellaonojie.fragments.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_itemDetails"
+            app:destination="@id/itemDetails"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@+id/menuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_ordersFragment2"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetails"
+        android:name="com.example.bellaonojie.fragments.ItemDetailsFragment"
+        android:label="ItemDetails"
+        tools:layout="@layout/item_details_fragment">
+        <action
+            android:id="@+id/action_itemDetails_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@+id/menuFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_itemDetails_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.bellaonojie.models.Item" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.bellaonojie.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.bellaonojie.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.bellaonojie.fragments.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_ordersFragment_to_menuFragment2"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.bellaonojie.fragments.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart" />
+
+</navigation>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/ic_profile"
+            android:checked="true"
+            android:icon="@drawable/ic_person"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/ic_orders"
+            android:icon="@drawable/ic_buy"
+            android:title="@string/orders" />
+        <item
+            android:id="@+id/ic_offers_and_promo"
+            android:icon="@drawable/ic_offer"
+            android:title="@string/offers_and_promo" />
+
+        <item
+            android:id="@+id/ic_privacy_policy"
+            android:icon="@drawable/ic_note"
+            android:title="@string/privacy_policy" />
+        <item
+            android:id="@+id/ic_security"
+            android:icon="@drawable/ic_security"
+            android:title="@string/security" />
+    </group>
+
+    <group
+        android:id="@+id/signout_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/ic_sign_out"
+            android:icon="@drawable/ic_exit"
+            android:title="@string/sign_out" />
+
+    </group>
+</menu>

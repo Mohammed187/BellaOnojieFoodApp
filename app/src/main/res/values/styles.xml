@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="profile_items_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">@dimen/dimen_32</item>
+        <item name="android:paddingEnd">@dimen/dimen_16</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>
